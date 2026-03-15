@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adity Sengar | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dark-theme">
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">AS<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#training" class="nav-item">Summer Training</a></li>
+                <li><a href="#certifications" class="nav-item">Certifications</a></li>
+                <li><a href="#achievements" class="nav-item">Achievements</a></li>
+                <li><a href="#resume" class="nav-item">Resume</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-padding">
+            <div class="hero-content reveal fade-left">
+                <p class="greeting">Hi, I'm</p>
+                <h1>Adity <span>Sengar</span></h1>
+                <h2 class="typing-text">Cloud Computing Enthusiast | Software Developer</h2>
+                
+                <div class="hero-buttons">
+                    <a href="#resume" class="btn primary-btn">View Resume</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Adity-Sengar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aditysengar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:adity.sengar06@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-image reveal fade-right">
+                <div class="geometric-shape">
+                    <!-- Fallback via ui-avatars if profile.jpg is missing -->
+                    <img src="profile.jpg" alt="Adity Sengar" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Adity+Sengar&background=38bdf8&color=fff&size=512';">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <h2 class="section-title reveal fade-up">About <span>Me</span></h2>
+            <div class="about-content grid-2">
+                <div class="about-text glass-card reveal fade-left">
+                    <p>
+                        I am a Computer Science student at <strong>Lovely Professional University</strong> with a strong
+                        passion for <strong>Cloud Computing</strong>, <strong>Artificial Intelligence</strong>, and <strong>Software Development</strong>.
+                    </p>
+                    <p>
+                        I focus on developing scalable and efficient system solutions. I'm a quick learner with high adaptability, passionate about solving algorithmic problems and exploring the rapidly evolving tech landscape. My goal is to leverage my technical and soft skills to build impactful and robust software solutions.
+                    </p>
+                </div>
+                <div class="education-summary glass-card reveal fade-right">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <ul class="timeline">
+                        <li>
+                            <h4>B.Tech Computer Science Engineering</h4>
+                            <p>Lovely Professional University, Phagwara, Punjab | Aug '23 - Present</p>
+                            <p class="highlight">CGPA: 7.45</p>
+                        </li>
+                        <li>
+                            <h4>Intermediate</h4>
+                            <p>Kendriya Vidyalaya Kanpur, UP | Apr '22 - Mar '23</p>
+                            <p class="highlight">Percentage: 67%</p>
+                        </li>
+                        <li>
+                            <h4>Matriculation</h4>
+                            <p>Kendriya Vidyalaya Kanpur, UP | Apr '20 - Mar '21</p>
+                            <p class="highlight">Percentage: 93%</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <h2 class="section-title reveal fade-up">Technical <span>Skills</span></h2>
+            <div class="skills-container grid-2">
+                <div class="skill-category glass-card reveal fade-up">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span>C++</span>
+                        <span>JavaScript</span>
+                        <span>C</span>
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal fade-up" style="transition-delay: 100ms;">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Flask</span>
+                        <span>NLP</span>
+                        <span>REST API</span>
+                        <span>API Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal fade-up" style="transition-delay: 200ms;">
+                    <h3><i class="fas fa-tools"></i> Tools/Platforms</h3>
+                    <div class="skill-tags">
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>Ubuntu</span>
+                        <span>Azure</span>
+                        <span>Kubernetes</span>
+                        <span>GitHub</span>
+                        <span>Gemini API</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card reveal fade-up" style="transition-delay: 300ms;">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span>Communication</span>
+                        <span>Adaptability</span>
+                        <span>Focus</span>
+                        <span>Quick Learner</span>
+                        <span>Problem Solving</span>
+                        <span>Public Speaking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <h2 class="section-title reveal fade-up">Featured <span>Projects</span></h2>
+            <div class="project-grid grid-2">
+                <div class="project-card glass-card reveal fade-up">
+                    <div class="project-content">
+                        <h3>AWS – Powered Smart Parking Management System</h3>
+                        <p class="date">Apr 2025</p>
+                        <p>
+                            Developed a cloud-based smart parking system using Java to automate vehicle entry, exit, parking slot tracking, and billing operations.
+                        </p>
+                        <ul class="project-features">
+                            <li>Implemented scalable serverless architecture covering data reliability.</li>
+                            <li>Monitors real-time parking slot availability.</li>
+                            <li>Integrated automated fare calculation and secure payment gateway for cashless transactions.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>AWS Lambda</span>
+                        <span>Amazon S3</span>
+                        <span>Serverless</span>
+                    </div>
+                    <div class="project-links mt-1">
+                        <a href="#" class="btn secondary-btn small-btn"><i class="fab fa-github"></i> Repository</a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal fade-up" style="transition-delay: 150ms;">
+                    <div class="project-content">
+                        <h3>AI Symptoms Checker Chatbot</h3>
+                        <p class="date">Mar 2025</p>
+                        <p>
+                            Established an AI-based healthcare chatbot using the Gemini API for preliminary symptom evaluation with an interactive conversational interface.
+                        </p>
+                        <ul class="project-features">
+                            <li>Applied Natural Language Processing (NLP) to interpret user inputs.</li>
+                            <li>Integrated a medical symptoms dataset to suggest possible health conditions.</li>
+                            <li>Optimized API requests for better response time and data privacy protection.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Gemini API</span>
+                        <span>NLP</span>
+                        <span>Flask/FastAPI</span>
+                    </div>
+                    <div class="project-links mt-1">
+                        <a href="https://github.com/Adity-Sengar" target="_blank" class="btn secondary-btn small-btn"><i class="fab fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summer Training Section -->
+        <section id="training" class="training section-padding">
+            <h2 class="section-title reveal fade-up">Summer <span>Training</span></h2>
+            <div class="training-content glass-card reveal fade-up">
+                <div class="training-info">
+                    <h3>Master DSA with Java/C++</h3>
+                    <h4>Institute: <strong>W3Grads</strong></h4>
+                    <span class="date-badge">July 2025</span>
+                    
+                    <ul class="training-details mt-1">
+                        <li>Completed intensive training in Data Structures and Algorithms with hands-on coding in Java and C++, strengthening problem-solving and debugging skills.</li>
+                        <li>Worked with core data structures (Arrays, Stacks, Queues, Trees, Graphs, Hash Tables) and practiced searching and sorting with time-space complexity analysis.</li>
+                        <li>Applied algorithmic techniques such as Recursion, Greedy Algorithms, Backtracking, and Dynamic Programming to solve optimization and search problems.</li>
+                    </ul>
+                </div>
+                <!-- Optional Side Image for Training Certificate -->
+                <div class="training-cert">
+                    <img src="training.jpg" alt="DSA Training Certificate" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e293b/38bdf8?text=DSA+Certificate';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section-padding">
+            <h2 class="section-title reveal fade-up">Licenses & <span>Certifications</span></h2>
+            <div class="certificates-list">
+                <div class="cert-item glass-card reveal fade-up">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-details">
+                        <h3>Computational Theory: Language Principal & Finite Automata Theory</h3>
+                        <p>Coursera | <span class="accent">Aug '25</span></p>
+                    </div>
+                    <a href="#" class="btn secondary-btn small-btn">View Certificate</a>
+                </div>
+                <div class="cert-item glass-card reveal fade-up" style="transition-delay: 100ms;">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-details">
+                        <h3>Build Generative AI Apps & Solution With No Code Tools</h3>
+                        <p>Coursera | <span class="accent">Aug '25</span></p>
+                    </div>
+                    <a href="#" class="btn secondary-btn small-btn">View Certificate</a>
+                </div>
+                <div class="cert-item glass-card reveal fade-up" style="transition-delay: 200ms;">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-details">
+                        <h3>ChatGPT -4 Prompt Engineering: ChatGPT, Generative AI & LLM</h3>
+                        <p>Coursera | <span class="accent">Aug '25</span></p>
+                    </div>
+                    <a href="#" class="btn secondary-btn small-btn">View Certificate</a>
+                </div>
+                <div class="cert-item glass-card reveal fade-up" style="transition-delay: 300ms;">
+                    <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="cert-details">
+                        <h3>Advanced Computer Networks</h3>
+                        <p>NPTEL | <span class="accent">Apr '25</span></p>
+                    </div>
+                    <a href="#" class="btn secondary-btn small-btn">View Certificate</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements section-padding">
+            <h2 class="section-title reveal fade-up">Key <span>Achievements</span></h2>
+            <div class="achievements-list glass-card reveal fade-up">
+                <div class="achievement-item">
+                    <div class="icon-box"><i class="fab fa-aws"></i></div>
+                    <div class="achievement-desc">
+                        <h3>AWS Academy Cloud Foundations Graduate badge</h3>
+                        <p class="accent">Nov '25</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon-box"><i class="fas fa-medal"></i></div>
+                    <div class="achievement-desc">
+                        <h3>2nd Runner-up</h3>
+                        <p>Education Revolution Debate Competition in LPU | <span class="accent">Apr '25</span></p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon-box"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-desc">
+                        <h3>1st Runner-up</h3>
+                        <p>Battle of Brilliance Debate Competition in LPU | <span class="accent">Oct '23</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume section-padding text-center">
+            <div class="glass-card resume-card reveal fade-up">
+                <h2 class="section-title mb-0">My <span>Resume</span></h2>
+                <p>Want to know more about my professional journey and technical expertise? Download my resume below to get the full picture.</p>
+                <div class="resume-actions mt-1">
+                    <a href="Adity_Sengar_Resume.pdf" target="_blank" class="btn primary-btn"><i class="fas fa-download"></i> Download Resume (PDF)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <h2 class="section-title reveal fade-up">Get In <span>Touch</span></h2>
+            <div class="contact-content grid-2">
+                <div class="contact-info glass-card reveal fade-left">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to me for collaborations, opportunities, or just to say hi!</p>
+                    
+                    <div class="info-items mt-1">
+                        <a href="mailto:adity.sengar06@gmail.com" class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <span>adity.sengar06@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917068237688" class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Mobile</h4>
+                                <span>+91-7068237688</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/aditysengar" target="_blank" class="info-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <span>linkedin.com/in/aditysengar</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Adity-Sengar" target="_blank" class="info-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <span>github.com/Adity-Sengar</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form glass-card reveal fade-right">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submitted! (Frontend demonstration)');">
+                        <div class="input-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 <span>Adity Sengar</span>. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Adity-Sengar" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/aditysengar" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:adity.sengar06@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="#home" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
