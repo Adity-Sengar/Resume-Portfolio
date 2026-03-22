@@ -8,18 +8,33 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Devicon for Tech Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 <body class="dark-theme">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <h3>Loading...</h3>
+        </div>
+    </div>
+
     <!-- Particle Background -->
     <div id="particles-js"></div>
 
@@ -30,6 +45,7 @@
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item active">Home</a></li>
                 <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#education" class="nav-item">Education</a></li>
                 <li><a href="#skills" class="nav-item">Skills</a></li>
                 <li><a href="#projects" class="nav-item">Projects</a></li>
                 <li><a href="#training" class="nav-item">Summer Training</a></li>
@@ -49,10 +65,15 @@
         </div>
     </nav>
 
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress">
+        <div id="scroll-progress-bar"></div>
+    </div>
+
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero section-padding">
-            <div class="hero-content reveal fade-left">
+            <div class="hero-content reveal fade-left" data-aos="fade-right" data-aos-duration="1000">
                 <p class="greeting">Hi, I'm</p>
                 <h1>Adity <span>Sengar</span></h1>
                 <h2 class="typing-text">Cloud Computing Enthusiast | Software Developer</h2>
@@ -69,29 +90,50 @@
                 </div>
             </div>
             
-            <div class="hero-image reveal fade-right">
+            <div class="hero-image reveal fade-right" data-aos="fade-left" data-aos-duration="1000">
                 <div class="geometric-shape">
                     <!-- Fallback via ui-avatars if profile.jpg is missing -->
                     <img src="profile.jpg" alt="Adity Sengar" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Adity+Sengar&background=38bdf8&color=fff&size=512';">
                 </div>
             </div>
+            
+            <!-- Floating Tech Icons -->
+            <div class="floating-icons">
+                <div class="floating-icon" style="animation-delay: 0s;"><i class="devicon-react-original"></i></div>
+                <div class="floating-icon" style="animation-delay: 1s;"><i class="devicon-python-plain"></i></div>
+                <div class="floating-icon" style="animation-delay: 2s;"><i class="devicon-javascript-plain"></i></div>
+                <div class="floating-icon" style="animation-delay: 3s;"><i class="devicon-nodejs-plain"></i></div>
+                <div class="floating-icon" style="animation-delay: 4s;"><i class="devicon-docker-plain"></i></div>
+                <div class="floating-icon" style="animation-delay: 5s;"><i class="devicon-aws-plain"></i></div>
+            </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="about section-padding">
-            <h2 class="section-title reveal fade-up">About <span>Me</span></h2>
-            <div class="about-content grid-2">
-                <div class="about-text glass-card reveal fade-left">
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text glass-card reveal fade-left" data-aos="fade-right" data-aos-duration="1000">
                     <p>
-                        I am a Computer Science student at <strong>Lovely Professional University</strong> with a strong
-                        passion for <strong>Cloud Computing</strong>, <strong>Artificial Intelligence</strong>, and <strong>Software Development</strong>.
+                        I am a Computer Science student at <strong>Lovely Professional University</strong> with a strong interest in <strong>Cloud Computing</strong>, <strong>Artificial Intelligence</strong>, and <strong>Software Development</strong>. I am passionate about learning modern technologies and applying them to build scalable, efficient, and real-world solutions.
                     </p>
                     <p>
-                        I focus on developing scalable and efficient system solutions. I'm a quick learner with high adaptability, passionate about solving algorithmic problems and exploring the rapidly evolving tech landscape. My goal is to leverage my technical and soft skills to build impactful and robust software solutions.
+                        I have developed a solid foundation in programming with languages such as <strong>Java</strong> and <strong>C++</strong>, along with hands-on experience in <strong>Data Structures and Algorithms</strong>. Through academic learning and practical projects, I enjoy solving algorithmic problems and improving my logical thinking and problem-solving abilities.
+                    </p>
+                    <p>
+                        During my learning journey, I have worked with various core data structures and algorithms, which has strengthened my understanding of efficient system design and optimization techniques. I am continuously exploring cloud technologies and modern development tools to expand my technical expertise.
+                    </p>
+                    <p>
+                        I am a quick learner with high adaptability and a strong curiosity for the rapidly evolving tech landscape. My goal is to leverage my technical knowledge, problem-solving skills, and creativity to build impactful software solutions and contribute to innovative technology-driven environments.
                     </p>
                 </div>
-                <div class="education-summary glass-card reveal fade-right">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section-padding">
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">Education</h2>
+            <div class="education-content">
+                <div class="education-summary glass-card reveal fade-up" data-aos="fade-up" data-aos-duration="1000">
                     <ul class="timeline">
                         <li>
                             <h4>B.Tech Computer Science Engineering</h4>
@@ -115,7 +157,7 @@
 
         <!-- Skills Section -->
         <section id="skills" class="skills section-padding">
-            <h2 class="section-title reveal fade-up">Technical <span>Skills</span></h2>
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">Technical <span>Skills</span></h2>
             <div class="skills-grid">
                 <div class="skill-card reveal fade-up" title="C++ Programming">
                     <i class="fas fa-cubes"></i>
@@ -183,9 +225,18 @@
 
         <!-- Projects Section -->
         <section id="projects" class="projects section-padding">
-            <h2 class="section-title reveal fade-up">Featured <span>Projects</span></h2>
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">Featured <span>Projects</span></h2>
             <div class="project-grid grid-2">
-                <div class="project-card glass-card reveal fade-up">
+                <div class="project-card glass-card reveal fade-up" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="image/Smart parking with AWS integration.png" alt="Smart Parking System">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="btn small-btn">View Project</a>
+                                <a href="#" class="btn small-btn secondary-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-content">
                         <h3>AWS – Powered Smart Parking Management System</h3>
                         <p class="date">Apr 2025</p>
@@ -204,12 +255,18 @@
                         <span>Amazon S3</span>
                         <span>Serverless</span>
                     </div>
-                    <div class="project-links mt-1">
-                        <a href="#" class="btn secondary-btn small-btn"><i class="fab fa-github"></i> Repository</a>
-                    </div>
                 </div>
 
-                <div class="project-card glass-card reveal fade-up" style="transition-delay: 150ms;">
+                <div class="project-card glass-card reveal fade-up" data-aos="fade-up" data-aos-delay="400" style="transition-delay: 150ms;">
+                    <div class="project-image">
+                        <img src="image/Doctor and chatbot diagnosing symptoms together.png" alt="AI Symptoms Checker">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="btn small-btn">View Project</a>
+                                <a href="https://github.com/Adity-Sengar/AI_Symptom_checker" target="_blank" class="btn small-btn secondary-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-content">
                         <h3>AI Symptoms Checker Chatbot</h3>
                         <p class="date">Mar 2025</p>
@@ -228,24 +285,20 @@
                         <span>NLP</span>
                         <span>Flask/FastAPI</span>
                     </div>
-                    <div class="project-links mt-1">
-                        <a href="https://github.com/Adity-Sengar/AI_Symptom_checker" target="_blank" class="btn secondary-btn small-btn"><i class="fab fa-github"></i> Repository</a>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Summer Training Section -->
         <section id="training" class="training section-padding">
-            <h2 class="section-title reveal fade-up">Summer <span>Training</span></h2>
-            <div class="training-content reveal fade-up" style="display:flex; justify-content:center;">
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">Summer <span>Training</span></h2>
+            <div class="training-content reveal fade-up" data-aos="fade-up" data-aos-delay="200" style="display:flex; justify-content:center;">
                 <div class="training-card glass-card" style="width:100%; max-width:840px; background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.25); backdrop-filter: blur(14px); padding: 2rem; box-shadow: 0 18px 42px rgba(0,0,0,0.35); transition: transform 0.35s ease, box-shadow 0.35s ease;">
                     <h3 style="font-size:1.85rem; color:var(--text-light); text-align:center; margin-bottom:0.6rem;">Master DSA with Java/C++</h3>
                     <div style="margin-bottom:1.25rem; text-align:left;">
                         <ul style="list-style: disc; margin-left:1.5rem; color: var(--text-muted); font-size:1rem; line-height:1.6;">
-                            <li>Completed intensive training in Data Structures and Algorithms with hands-on coding in Java and C++, strengthening problem-solving and debugging skills.</li>
-                            <li>Worked with core data structures (Arrays, Stacks, Queues, Trees, Graphs, Hash Tables) and practiced searching and sorting with time–space complexity analysis.</li>
-                            <li>Practiced algorithmic techniques such as Recursion, Greedy Algorithms, Backtracking, and Dynamic Programming to solve optimization and search problems.</li>
+                            <li>During my summer training, I completed intensive training in Data Structures and Algorithms with hands-on coding in Java and C++. The training strengthened my problem-solving and debugging skills while working with fundamental data structures such as Arrays, Stacks, Queues, Trees, Graphs, and Hash Tables. I also implemented various searching and sorting algorithms while analyzing their time and space complexity. Additionally, I practiced algorithmic techniques including Recursion, Greedy Algorithms, Backtracking, and Dynamic Programming to solve optimization and search-based problems.</li>
+                            
                         </ul>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem; margin-bottom:1rem;">
@@ -265,6 +318,10 @@
                     </div>
 
                     <div style="text-align:center; margin-top:1.25rem;">
+                        <a href="https://drive.google.com/file/d/1DMtuXATGowBTTuUK3SuD-dQ9yoxuLVEW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cert-preview-link">
+                            <img src="image/Screenshot 2026-03-22 192908.png" alt="DSA Certificate Preview" class="cert-preview-image" onerror="this.src='https://via.placeholder.com/200x150/7c3aed/ffffff?text=DSA+Certificate'">
+                        </a>
+                        <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">Click image to view certificate</p>
                         <a href="https://drive.google.com/file/d/1DMtuXATGowBTTuUK3SuD-dQ9yoxuLVEW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); color: #fff; border-radius: 999px; padding: 12px 28px; font-weight: 600; box-shadow: 0 10px 24px rgba(59,130,246,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;">
                             <i class="fas fa-certificate"></i>
                             View DSA Certificate
@@ -276,66 +333,90 @@
 
         <!-- Certifications Section -->
         <section id="certifications" class="certifications section-padding">
-            <h2 class="section-title reveal fade-up">Licenses & <span>Certifications</span></h2>
-            <div class="certificates-list">
-                <div class="cert-item glass-card reveal fade-up">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="cert-details">
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">Licenses & <span>Certifications</span></h2>
+            <div class="certificates-grid">
+                <div class="cert-card glass-card reveal fade-up" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://drive.google.com/file/d/1kIjqZwy_iSMDkoYXjQ5LX7u52vcuAg-V/view?usp=drive_link" target="_blank" class="cert-link">
+                        <img src="image/computational.png" alt="Computational Theory Certificate" class="cert-image" onerror="this.src='https://via.placeholder.com/300x200/38bdf8/ffffff?text=Certificate'">
+                        <div class="cert-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </a>
+                    <div class="cert-info">
                         <h3>Computational Theory: Language Principal & Finite Automata Theory</h3>
                         <p>Coursera | <span class="accent">Aug '25</span></p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1kIjqZwy_iSMDkoYXjQ5LX7u52vcuAg-V/view?usp=drive_link" target="_blank" class="btn secondary-btn small-btn">View Certificate</a>
                 </div>
-                <div class="cert-item glass-card reveal fade-up" style="transition-delay: 100ms;">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="cert-details">
+                <div class="cert-card glass-card reveal fade-up" data-aos="zoom-in" data-aos-delay="200" style="transition-delay: 100ms;">
+                    <a href="https://drive.google.com/file/d/1dA22y3769UcbztUQg2M9nRUqMVBgEqpm/view?usp=drive_link" target="_blank" class="cert-link">
+                        <img src="image/built generative.png" alt="Generative AI Apps Certificate" class="cert-image" onerror="this.src='https://via.placeholder.com/300x200/8b5cf6/ffffff?text=Certificate'">
+                        <div class="cert-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </a>
+                    <div class="cert-info">
                         <h3>Build Generative AI Apps & Solution With No Code Tools</h3>
                         <p>Coursera | <span class="accent">Aug '25</span></p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1dA22y3769UcbztUQg2M9nRUqMVBgEqpm/view?usp=drive_link" target="_blank" class="btn secondary-btn small-btn">View Certificate</a>
                 </div>
-                <div class="cert-item glass-card reveal fade-up" style="transition-delay: 200ms;">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="cert-details">
+                <div class="cert-card glass-card reveal fade-up" data-aos="zoom-in" data-aos-delay="300" style="transition-delay: 200ms;">
+                    <a href="https://drive.google.com/file/d/1PYrvrQLJElKi14EzfTZ0Iv2Jxs6DIjvA/view?usp=drive_link" target="_blank" class="cert-link">
+                        <img src="image/chatgpt.png" alt="ChatGPT Prompt Engineering Certificate" class="cert-image" onerror="this.src='https://via.placeholder.com/300x200/38bdf8/ffffff?text=Certificate'">
+                        <div class="cert-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </a>
+                    <div class="cert-info">
                         <h3>ChatGPT -4 Prompt Engineering: ChatGPT, Generative AI & LLM</h3>
                         <p>Coursera | <span class="accent">Aug '25</span></p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1PYrvrQLJElKi14EzfTZ0Iv2Jxs6DIjvA/view?usp=drive_link" target="_blank" class="btn secondary-btn small-btn">View Certificate</a>
                 </div>
-                <div class="cert-item glass-card reveal fade-up" style="transition-delay: 300ms;">
-                    <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
-                    <div class="cert-details">
+                <div class="cert-card glass-card reveal fade-up" data-aos="zoom-in" data-aos-delay="400" style="transition-delay: 300ms;">
+                    <a href="https://drive.google.com/file/d/19x9CGs49GbX6StoYtrpimn5i5Q08Kayw/view?usp=drive_link" target="_blank" class="cert-link">
+                        <img src="image/nptel.png" alt="Advanced Computer Networks Certificate" class="cert-image" onerror="this.src='https://via.placeholder.com/300x200/8b5cf6/ffffff?text=Certificate'">
+                        <div class="cert-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </a>
+                    <div class="cert-info">
                         <h3>Advanced Computer Networks</h3>
                         <p>NPTEL | <span class="accent">Apr '25</span></p>
                     </div>
-                    <a href="https://drive.google.com/file/d/19x9CGs49GbX6StoYtrpimn5i5Q08Kayw/view?usp=drive_link" target="_blank" class="btn secondary-btn small-btn">View Certificate</a>
                 </div>
             </div>
         </section>
 
         <!-- Achievements Section -->
         <section id="achievements" class="achievements section-padding">
-            <h2 class="section-title reveal fade-up">Key <span>Achievements</span></h2>
-            <div class="achievements-list glass-card reveal fade-up">
-                <div class="achievement-item">
-                    <div class="icon-box"><i class="fab fa-aws"></i></div>
-                    <div class="achievement-desc">
-                        <h3>AWS Academy Cloud Foundations Graduate badge</h3>
-                        <p class="accent">Nov '25</p>
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">Key <span>Achievements</span></h2>
+            <div class="timeline-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>AWS Academy Cloud Foundations Graduate badge</h3>
+                            <p class="date">Nov '25</p>
+                        </div>
                     </div>
-                </div>
-                <div class="achievement-item">
-                    <div class="icon-box"><i class="fas fa-medal"></i></div>
-                    <div class="achievement-desc">
-                        <h3>2nd Runner-up</h3>
-                        <p>Education Revolution Debate Competition in LPU | <span class="accent">Apr '25</span></p>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>2nd Runner-up</h3>
+                            <p>Education Revolution Debate Competition in LPU | <span class="accent">Apr '25</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="achievement-item">
-                    <div class="icon-box"><i class="fas fa-trophy"></i></div>
-                    <div class="achievement-desc">
-                        <h3>1st Runner-up</h3>
-                        <p>Battle of Brilliance Debate Competition in LPU | <span class="accent">Oct '23</span></p>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>1st Runner-up</h3>
+                            <p>Battle of Brilliance Debate Competition in LPU | <span class="accent">Oct '23</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -343,7 +424,7 @@
 
         <!-- Resume Section -->
         <section id="resume" class="resume section-padding text-center">
-            <div class="glass-card resume-card reveal fade-up">
+            <div class="glass-card resume-card reveal fade-up" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="section-title mb-0">My <span>Resume</span></h2>
                 <p>Want to know more about my professional journey and technical expertise? Download my resume below to get the full picture.</p>
                 <div class="resume-actions mt-1">
@@ -354,9 +435,9 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact section-padding">
-            <h2 class="section-title reveal fade-up">Get In <span>Touch</span></h2>
+            <h2 class="section-title reveal fade-up" data-aos="fade-up" data-aos-duration="800">Get In <span>Touch</span></h2>
             <div class="contact-content grid-2">
-                <div class="contact-info glass-card reveal fade-left">
+                <div class="contact-info glass-card reveal fade-left" data-aos="fade-right" data-aos-duration="1000">
                     <h3>Contact Information</h3>
                     <p>Feel free to reach out to me for collaborations, opportunities, or just to say hi!</p>
                     
@@ -392,7 +473,7 @@
                     </div>
                 </div>
                 
-                <div class="contact-form glass-card reveal fade-right">
+                <div class="contact-form glass-card reveal fade-right" data-aos="fade-left" data-aos-duration="1000">
                     <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submitted! (Frontend demonstration)');">
                         <div class="input-group">
                             <input type="text" placeholder="Your Name" required>
